@@ -10,73 +10,143 @@
         align-items: center; 
         min-height: 100vh; 
         margin: 0; 
-        background-color: #f0f0f0; 
+        background: linear-gradient(135deg, #f6d365 0%, #fda085 100%); 
+        background-attachment: fixed; 
     }
 
     div.container {
-        width: 90%; /* コンテンツの幅を設定 */
-        max-width: 800px; /* 最大幅を設定 */
+        width: 90%; 
+        max-width: 800px; 
         text-align: center; 
         background-color: #fff; 
         padding: 20px; 
         border-radius: 8px; 
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+        transition: transform 0.2s; 
+    }
+
+    div.container:hover {
+        transform: scale(1.02); 
     }
 
     header {
         margin-bottom: 20px; 
     }
 
+    nav ul {
+        display: flex; 
+        justify-content: flex-start; 
+        padding: 0; 
+        list-style: none; 
+    }
+
+    nav ul li {
+        margin-right: 20px; 
+    }
+
+    nav ul li a {
+        text-decoration: none; 
+        color: #ff6b6b; 
+        font-weight: bold; 
+        transition: color 0.2s; 
+    }
+
+    nav ul li a:hover {
+        color: #d34a4a; 
+    }
+
     .menu-item {
-        margin-bottom: 20px; /* アイテム間の余白を設定 */
+        margin-bottom: 20px; 
+        text-align: left; 
+        background-color: #f9f9f9; 
+        padding: 10px; 
+        border-radius: 5px; 
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); 
+        transition: transform 0.2s, box-shadow 0.2s; 
+    }
+
+    .menu-item:hover {
+        transform: translateY(-5px); 
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
     }
 
     .menu-photo img {
-        max-width: 100%; /* 画像をコンテナに合わせて調整 */
-        height: auto; /* アスペクト比を維持して自動的に高さを調整 */
+        max-width: 100%; 
+        height: auto; 
+        border-radius: 5px; 
     }
 
     footer {
-        margin-top: 20px; /* フッターとコンテンツの間の余白を設定 */
-        text-align: center; /* テキストを中央揃え */
+        margin-top: 40px;
+        text-align: right; 
     }
+
     body, h1, h2, h3, h4, h5, h6, p, ul, li, a {
-    font-family: 'Arial', sans-serif; /* かわいらしいフォントに置き換える */
-}
+        font-family: 'Arial', sans-serif; 
+    }
 
-/* 例えば、フォントサイズや色などを追加で指定することもできます */
-.menu-item p {
-    font-size: 16px;
-    color: #333;
-    font-weight: bold;
-}
+    h1 {
+        color: #333; 
+    }
+
+    h2 {
+        color: #555; 
+        margin-bottom: 20px; 
+    }
+
+    .menu-item p {
+        font-size: 16px;
+        color: #333;
+        font-weight: bold;
+        margin: 5px 0; 
+    }
+
+    footer p {
+        font-size: 14px;
+        color: #777; 
+    }
+
+    .vertical-img {
+        width: auto;
+        height: 400px; 
+    }
+
+    .horizontal-img {
+        width: 50%; 
+        height: auto;
+    }
+
+    /* Add custom font styling for the message */
+    .message {
+        font-family: 'Times New Roman', Times, serif; /* Change to desired font */
+        font-size: 18px; /* Change to desired size */
+        color: #333; /* Change to desired color */
+    }
+
 </style>
-
 </head>
 <body>
 <div class="container">
-     <header>
-            <h1>古着</h1>
-            
-            <nav>
-              <ul>
-                  <li><a href="index.html">TOP</a></li>
-                  <li><a href="PBLCSS.html">ITEM</a></li>
-                  <li><a href="#">MAP</a></li>
-              </ul>
-             </nav>
-     </header>
-     <main>
-     <div>
-         <img src="image/PBL5.jpg" alt="">
-     </div>
-     <main>
-          <h2>MESSAGE</h2>
-            <p>学生古着店です。</p>
-     </main>
-     <footer>
-                 <p>学生古着店</p>
-                 </footer>
-     </div>
-     </body>
-     </html>
+    <header>
+        <h1>古着</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">TOP</a></li>
+                <li><a href="PBLCSS.html">CLOTHES</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div>
+            <img class="horizontal-img" src="image/PBL5.jpg" alt="">
+        </div>
+        <h2>MESSAGE</h2>
+        <p class="message">服をお求めの方はCLOTHESでお買い求めください。</p>
+    </main>
+    <footer>
+        <p>学生古着店</p>
+    </footer>
+</div>
+</body>
+</html>
+
